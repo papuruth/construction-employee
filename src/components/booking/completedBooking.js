@@ -86,17 +86,18 @@ export default class CompleteBooking extends React.PureComponent {
     console.log('bookingDetails123', bookingDetails);
 
     return (
-      <SafeAreaView style={styles.container}>
-        <ImageBackground source={background} resizeMode="cover" style={styles.bgStyle}>
-          <ScrollView contentContainerStyle={styles.scrollContainer}>
-            {checkEmpty(bookingDetails) ? (
-              <SafeAreaView>
-                <Icon name="gears" type="font-awesome" size={150} color="#00000666" />
+     (
+       <SafeAreaView style={styles.container}>
+         <ImageBackground source={background} resizeMode="cover" style={styles.bgStyle}>
+           <ScrollView contentContainerStyle={styles.scrollContainer}>
+             {checkEmpty(bookingDetails) ? (
+               <SafeAreaView>
+                 <Icon name="gears" type="font-awesome" size={150} color="#00000666" />
 
-                <View style={styles.textContainer}>
-                  <Text style={styles.availableText}>No Booking Completed</Text>
-                </View>
-              </SafeAreaView>
+                 <View style={styles.textContainer}>
+                   <Text style={styles.availableText}>No Booking Completed</Text>
+                 </View>
+               </SafeAreaView>
             ) : (
               bookingDetails.map(
                 (ele) =>
@@ -142,9 +143,10 @@ export default class CompleteBooking extends React.PureComponent {
                   ),
               )
             )}
-          </ScrollView>
-        </ImageBackground>
-      </SafeAreaView>
+           </ScrollView>
+         </ImageBackground>
+       </SafeAreaView>
+)
     );
   }
 }

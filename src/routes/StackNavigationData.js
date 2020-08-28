@@ -264,7 +264,7 @@ const StackNavigationData = [
       fontSize: 18,
     },
   },
-  {
+   {
     name: 'Bookings',
     path: 'bookings',
     component: CompleteBooking,
